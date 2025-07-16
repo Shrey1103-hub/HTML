@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Colour Changer</title>
+    <style>
+        button{
+            height: 100px; width: 100px; 
+        
+        }
+        div{
+            text-align: center;
+            margin-top: 200px;
+           
+        }
+        p{
+            font-size: 20px;
+        }
+        .bl{
+            background-color: blue;
+        }
+        .bu{
+            background-color: burlywood;
+        }
+        .ca{
+            background-color: cadetblue;
+        }
+        .ch{
+            background-color: chartreuse;
+        }
+
+    </style>    
+</head>
+<body>
+    <div>
+    <h1>Colour Scheme Switcher</h1>
+    <button style="background-color: blue;" 
+    onclick="changeColor('bl')">
+    </button>
+
+    <button style="background-color:burlywood;"
+     onclick="changeColor('bu')">
+    </button>
+
+    <button style="background-color:cadetblue;"
+     onclick="changeColor('ca')">
+    </button>
+
+    <button style="background-color:chartreuse;"
+     onclick="changeColor('ch')">
+    </button>
+
+    <p><b>Try clicking on one of the colors above<br>
+to change the background color of this page!</b></p>
+
+</div>
+<script>
+    function changeColor(colorClass) {
+            document.body.classList.remove('bl', 'bu', 'ca', 'ch');
+            document.body.classList.add(colorClass);
+    }
+
+</script>
+
+</body>
+</html>
